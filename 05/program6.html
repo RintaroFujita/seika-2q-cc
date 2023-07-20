@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .my-button {
+            border: solid 1px black;
+            padding: 5px 10px;
+        }
+
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        .round {
+            border-radius: 20px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .disabled {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="my-button" class="my-button round">ボタン</div>
+        <script>
+            let myButton = document.getElementById("my-button");
+            myButton.classList.toggle("disabled");
+        </script>
+</body>
+
+</html>

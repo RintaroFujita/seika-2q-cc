@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        hr {
+            margin: 100px 0;
+        }
+
+        #basic_form {
+            width: 600px;
+            padding: 50px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            background-color: rgb(225, 225, 225);
+            border-radius: 10px;
+        }
+
+        #basic_form>div {
+            padding: 10px;
+        }
+
+        #basic_form label {
+            display: flex;
+            font-weight: bold;
+        }
+
+        #basic_form label span {
+            display: inline-block;
+            width: 150px;
+        }
+
+        #basic_form label div {
+            flex: 1;
+        }
+
+        #basic_form input {
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        #basic_form button {
+            display: block;
+            border: 0;
+            color: #FFF;
+            padding: 10px;
+            width: 200px;
+            margin: 20px auto 0 auto;
+            background-color: #0144ff;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+            color: red;
+        }
+
+        #swiper-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .swiper {
+            position: relative;
+            width: 500px;
+            height: 300px;
+        }
+
+        .swiper-title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .swiper-slide div {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide div img {
+            width: 40%;
+            height: auto;
+        }
+        .slider a {
+			display: block;
+			background: #fff;
+			padding-bottom: 25px;
+			font-size: 30px;
+			text-align: center;
+			
+		}
+
+		.slider span {
+			display: inline-block;
+			font-size: 30px;
+			margin-right: 20px;
+			color: gray;
+			text-align: left;
+		}
+
+		body {
+			background: lightgray;
+		}
+
+		li {
+			list-style-type: none;
+		}
+
+		.wrapper {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		h1 {
+			text-align: center;
+			padding: 30px;
+			font-size: 30px;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+    </style>
+    <title>詐欺撲滅サイト</title>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+</head>
+
+<body>
+    <h1>オレオレ詐欺被害者の会</h1>
+    <div id="swiper-container">
+
+        <div>
+            <!-- Slider main container -->
+            <div class="swiper swiper-1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination swiper-pagination-1"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev swiper-button-prev-1"></div>
+                <div class="swiper-button-next swiper-button-next-1"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar swiper-scrollbar-1"></div> -->
+            </div>
+            <div id="swiper-title-1" class="swiper-title"></div>
+        </div>
+
+        <div>
+            <!-- Slider main container -->
+            <div class="swiper swiper-2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="/img/dada_koneru_boy.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="/img/dada_koneru_man.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="/img/pose_kuyashii_woman.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination swiper-pagination-2"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev swiper-button-prev-2"></div>
+                <div class="swiper-button-next swiper-button-next-2"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar swiper-scrollbar-2"></div>
+            </div>
+            <div id="swiper-title-2" class="swiper-title"></div>
+        </div>
+    </div>
+    <hr>
+    <h2>オレオレ詐欺被害者の会　会員登録フォーム</h2>
+    <h3>入力するとまた被害に遭います</h3>
+    <form id="basic_form" novalidate>
+        <div>
+            <label>
+                <span>名前</span>
+                <div>
+                    <input id="basic_name" type="text" name="name" placeholder="名前を入力してください。" />
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>メールアドレス</span>
+                <div>
+                    <input id="basic_email" type="text" name="email" placeholder="メールアドレスを入力してください。" />
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>パスワード</span>
+                <div>
+                    <input id="basic_password" type="text" name="password" placeholder="パスワードを入力してください。" />
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>年齢</span>
+                <div>
+                    <input id="basic_age" type="text" name="age" placeholder="年齢を入力してください。" />
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>住所</span>
+                <div>
+                    <input id="basic_address" type="text" name="address" placeholder="住所を入力してください。" />
+                </div>
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>被害内容</span>
+                <div>
+                    <input id="basic_text" type="textarea" name="text" placeholder="被害内容を入力してください。" />
+                </div>
+            </label>
+        </div>
+        <button type="submit">送信</button>
+    </form>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>

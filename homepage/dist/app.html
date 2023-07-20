@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>app.js用</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+
+	<style>
+		.slider a {
+			display: block;
+			background: #fff;
+			padding-bottom: 25px;
+			font-size: 30px;
+			text-align: center;
+
+		}
+
+		.slider span {
+			display: inline-block;
+			font-size: 30px;
+			margin-right: 20px;
+			color: gray;
+			text-align: left;
+		}
+
+
+		li {
+			list-style-type: none;
+		}
+
+		.wrapper {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		h1 {
+			text-align: center;
+			padding: 30px;
+			font-size: 30px;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+		body {
+			background-color: #1c1344;
+		}
+
+		.vanta-controls {
+			position: fixed;
+			right: 10px;
+			z-index: 100;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 4px;
+			padding-left: 10px;
+			width: 15%;
+		}
+
+		.vanta-controls label {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.vanta-controls input[type="checkbox"],
+		.vanta-controls input[type="range"],
+		.vanta-controls input[type="color"] {
+			margin-left: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="vanta-controls">
+		<h3>Vanta.js<br>コントロールパネル</h3>
+		<label for="amplitudeFactor">
+			形状変化:
+			<input type="range" id="amplitudeFactor" min="0" max="30" step="0.1" value="1">
+		</label>
+		<label for="size">
+			サイズ変更:
+			<input type="range" id="size" min="0" max="3" step="0.1" value="0.7">
+		</label>
+		<label for="color">
+			色:
+			<input type="color" id="color" value="#ffffff">
+		</label>
+		<label for="background">
+			背景色:
+			<input type="color" id="background" value="#1c1344">
+		</label>
+	</div>
+	<div class="s-section"></div>
+	<div id="haloBlock"></div>
+	<div class="wrapper">
+		<ul class="slider" id="slider">
+			<li><a href="#"><span>2023.5.10</span>jqueryとVanta.jsを導入しました</a></li>
+			<li><a href="#"><span>2023.5.10</span>jqueryでこのスライダーを出しています。</a></li>
+			<li><a href="#"><span>2023.5.23</span>コントロールバーで値を変更できるようにしています。</a></li>
+		</ul>
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>

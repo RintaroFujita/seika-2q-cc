@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>マウスイベント</title>
+  <script>
+    function displayMessage() {
+      var itemDiv = document.getElementById("item");
+      itemDiv.textContent = "カーソルが入っています";
+    }
+    
+    function hideMessage() {
+      var itemDiv = document.getElementById("item");
+      itemDiv.textContent = "";
+    }
+  </script>
+  <style>
+    #item {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div id="item" onmouseover="displayMessage()" onmouseout="hideMessage()"></div>
+</body>
+</html>

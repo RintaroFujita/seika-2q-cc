@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>サインイン</title>
+    <script>
+        var password = "pass"; 
+        var attempts = 0; 
+        
+        function signIn() {
+            var inputPassword = window.prompt("パスワードを入力してください:");
+            attempts++; 
+            if (inputPassword === password) {
+                window.alert("サインイン成功");
+            } else {
+                if (attempts < 3) {
+                    window.alert("パスワードが間違っています。再度入力してください。");
+                    signIn(); 
+                } else {
+                    window.alert("サインインに失敗しました。");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="signIn()">サインイン</button>
+</body>
+</html>

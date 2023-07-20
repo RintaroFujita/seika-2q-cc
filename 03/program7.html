@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function getDescription() {
+  return "タイトル：" + this.title + "、著者：" + this.author;
+};
+		let book = {
+			title: 'こころ',
+			author: '夏目漱石',
+			isbn: 4101010137,
+			getDescription,};
+		let description = book.getDescription();
+		console.log(description);
+
+	</script>
+
+</body>
+
+</html>

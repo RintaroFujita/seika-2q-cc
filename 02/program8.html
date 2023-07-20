@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Program 8</title>
+  </head>
+  <body>
+    <button onclick="one()">+1</button>
+    <button onclick="ten()">+10</button>
+    <script>
+      let count = 0;
+      
+      function one() {
+        count++;
+        console.log(count);
+        if (count >= 100) {
+          console.log("countが100以上になりました");
+        }
+      }
+      
+      function ten() {
+        count += 10;
+        console.log(count);
+        if (count >= 100) {
+          console.log("countが100以上になりました");
+        }
+      }
+    </script>
+  </body>
+</html>

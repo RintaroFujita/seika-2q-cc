@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>確認ページ</title>
+	<style>
+		/* 追加のCSSスタイル */
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		#confirmation {
+			max-width: 400px;
+			margin: 20px auto;
+			background-color: #ffffff;
+			border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		#confirmation p {
+			margin: 0;
+			font-weight: bold;
+		}
+
+		#submitButton {
+			background-color: #4caf50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 4px;
+			font-size: 16px;
+			cursor: pointer;
+			display: block;
+			margin: 20px auto;
+		}
+
+		#submitButton:hover {
+			background-color: #45a049;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1>入力内容の確認</h1>
+	<div id="confirmation"></div>
+	<button id="submitButton">送信</button>
+
+	<script>
+		// URLパラメータから値を取得
+		const urlParams = new URLSearchParams(window.location.search);
+		const name = urlParams.get('name');
+		const email = urlParams.get('email');
+
+		// 入力内容を表示
+		const confirmationDiv = document.getElementById("confirmation");
+		confirmationDiv.innerHTML = "<p>名前: " + name + "</p><p>メールアドレス: " + email + "</p>";
+
+		// 送信ボタンがクリックされたときにコンソールログに出力
+		const submitButton = document.getElementById("submitButton");
+		submitButton.addEventListener("click", function () {
+			console.log("名前: " + name);
+			console.log("メールアドレス: " + email);
+		});
+	</script>
+</body>
+
+</html>

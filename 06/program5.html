@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .focus {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="input-text" type="text""></input>
+
+    <script>
+        const inputElement = document.getElementById("input-text");
+        inputElement.addEventListener("blur", function(event) {
+            if (inputElement.value.length > 10) {
+                window.alert("文字数が10を超えています");
+                inputElement.value = "";
+            }
+        });
+    </script>
+</body>
+
+</html>

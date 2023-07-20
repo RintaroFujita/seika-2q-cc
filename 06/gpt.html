@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>フォーム入力</title>
+  <style>
+    /* 追加のCSSスタイル */
+
+    .container {
+      width: 400px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 380px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .confirmation-container {
+      width: 400px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .confirmation-container h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .confirmation-content {
+      margin-bottom: 20px;
+    }
+
+    .confirmation-content p {
+      margin: 0;
+    }
+
+    .confirmation-button {
+      text-align: center;
+    }
+
+    .confirmation-button button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .confirmation-button button:hover {
+      background-color: #45a049;
+    }
+
+    h1{
+	font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>フォーム入力</h1>
+    <form id="myForm" action="confirmation.html">
+      <div class="form-group">
+        <label for="name">名前:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <button type="submit">確認</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("myForm");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // デフォルトのフォーム送信をキャンセル
+
+      // フォームの値を取得
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+
+      // 確認ページへリダイレクト
+      const confirmationUrl = "kakunin.html?name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email);
+      window.location.href = confirmationUrl;
+    });
+  </script>
+</body>
+</html>

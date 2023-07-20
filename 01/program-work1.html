@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<body>
+
+</body>
+
+</html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<!-- <input type="button" value="項目を追加" id="add">
+	<input type="button" value="プリント" id="print"> -->
+
+	<script>
+		// let word = [];
+		// function butotnClick() {
+		// 	let name = prompt('名前を入力してください');
+		// 	word.push(name)
+		// }
+	
+		// let button = document.getElementById('add');
+		// button.addEventListener('click', butotnClick);
+
+		
+		// function butotnClick2() {
+		// 	console.log(word)
+		// }
+	
+		// let print = document.getElementById('print');
+		// print.addEventListener('click', butotnClick2);
+		var list = []; // リストの配列
+        
+        // リスト項目を追加する関数
+        function addItem() {
+            var item = window.prompt("リストに追加する項目を入力してください:");
+            if (item !== null && item !== "") {
+                list.push(item); // 入力された項目をリストに追加
+            }
+        }
+        
+        // リストをプリントする関数
+        function printList() {
+            for (var i = 0; i < list.length; i++) {
+                console.log("・" + list[i]); // リスト項目をコンソールにプリント
+            }
+        }
+	</script>
+	<button onclick="addItem()">項目を追加</button>
+	<button onclick="printList()">プリント</button>
+</body>
+
+</html>
